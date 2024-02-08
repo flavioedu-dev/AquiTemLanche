@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AquiTemLanche.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body>  
+    <header class="d-flex justify-content-end p-3">
+        <a asp-controller="Home" asp-action="Index" class="mx-3">Home</a>
+        <a asp-controller="Snack" asp-action="List" class="mx-3">List</a>
+    </header>
     <main role="main" class="pb-3">
         @RenderBody()
     </main>

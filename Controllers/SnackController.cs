@@ -1,4 +1,5 @@
 ﻿using AquiTemLanche.Repositories.Interfaces;
+using AquiTemLanche.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AquiTemLanche.Controllers
@@ -14,8 +15,10 @@ namespace AquiTemLanche.Controllers
 
         public IActionResult List()
         {
-            var snacks = _snacks.GetAllSnacks;
-            return View(snacks);
+            SnackListViewModel snackListViewModel = new SnackListViewModel();
+            snackListViewModel.Snacks = _snacks.GetAllSnacks;
+            snackListViewModel.CurrentCategory = "Categoria atual";
+            return View(snackListViewModel);
         }
     }
 }
