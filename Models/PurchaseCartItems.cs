@@ -12,5 +12,7 @@ namespace AquiTemLanche.Models
 
         [StringLength(200)]
         public string PurchaseCartId { get; set; }
+
+        public int Amount { get; set; }
     }
 }
